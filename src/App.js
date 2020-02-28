@@ -1,26 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Main from "./Main/Main";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    counter: 0,
+    maxCount: 5,
+  };
+
+  inc = () => {
+    let UpdCounter = {
+      counter: this.state.counter++
+    }
+    if (this.state.counter <= this.state.maxCount) {
+      this.setState({UpdCounter})
+    }
+  }
+  reset = () => {
+    let UpdCounter = {
+      counter: this.state.counter = 0
+    }
+    this.setState({UpdCounter})
+  }
+
+  disableBtn = () => {
+    if (this.state.counter=0) {
+
+    }
+  }
+
+  render = () => {
+    return (
+      <Main inc={this.inc} reset={this.reset} counter={this.state.counter}/>
+    )
+  }
 }
+
 
 export default App;
