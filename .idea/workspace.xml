@@ -2,19 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51fd3fe9-e700-4dab-9ab9-90622f298ebf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/ButtonBlock/Button/Button.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/ButtonBlock/Button/Button.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/ButtonBlock/ButtonBlock.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/ButtonBlock/ButtonBlock.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/CounterDisplay/CounterDisplay.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/CounterDisplay/CounterDisplay.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/Main.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/Main.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Counter/ButtonBlock/Button/Button.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Counter/ButtonBlock/Button/Button.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Counter/ButtonBlock/ButtonBlock.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Counter/ButtonBlock/ButtonBlock.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Counter/Counter.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Counter/CounterDisplay/CounterDisplay.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/ButtonBlock/Button/Button.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/ButtonBlock/Button/Button.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/ButtonBlock/ButtonBlock.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/ButtonBlock/ButtonBlock.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/CounterDisplay/CounterDisplay.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/CounterDisplay/CounterDisplay.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/CounterDisplay/CounterDisplay.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter/Counter.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,34 +81,50 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582902834774</updated>
-      <workItem from="1582902836602" duration="6382000" />
+      <workItem from="1582902836602" duration="24896000" />
     </task>
+    <task id="LOCAL-00001" summary="11">
+      <created>1582909325986</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582909325986</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="11" />
+    <option name="LAST_COMMIT_MESSAGE" value="11" />
   </component>
   <component name="WindowStateProjectService">
     <state x="466" y="194" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582904622329">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
     <state x="466" y="194" key="#com.intellij.fileTypes.FileTypeChooser/62.0.1304.768@62.0.1304.768" timestamp="1582904622329" />
-    <state width="1283" height="192" key="GridCell.Tab.0.bottom" timestamp="1582903292027">
+    <state x="352" y="0" key="CommitChangelistDialog2" timestamp="1582909323893">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1283" height="192" key="GridCell.Tab.0.bottom/62.0.1304.768@62.0.1304.768" timestamp="1582903292027" />
-    <state width="1283" height="192" key="GridCell.Tab.0.center" timestamp="1582903292027">
+    <state x="352" y="0" key="CommitChangelistDialog2/62.0.1304.768@62.0.1304.768" timestamp="1582909323893" />
+    <state width="1283" height="192" key="GridCell.Tab.0.bottom" timestamp="1583060465864">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1283" height="192" key="GridCell.Tab.0.center/62.0.1304.768@62.0.1304.768" timestamp="1582903292027" />
-    <state width="1283" height="192" key="GridCell.Tab.0.left" timestamp="1582903292027">
+    <state width="1283" height="192" key="GridCell.Tab.0.bottom/62.0.1304.768@62.0.1304.768" timestamp="1583060465864" />
+    <state width="1283" height="192" key="GridCell.Tab.0.center" timestamp="1583060465864">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1283" height="192" key="GridCell.Tab.0.left/62.0.1304.768@62.0.1304.768" timestamp="1582903292027" />
-    <state width="1283" height="192" key="GridCell.Tab.0.right" timestamp="1582903292027">
+    <state width="1283" height="192" key="GridCell.Tab.0.center/62.0.1304.768@62.0.1304.768" timestamp="1583060465864" />
+    <state width="1283" height="192" key="GridCell.Tab.0.left" timestamp="1583060465864">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1283" height="192" key="GridCell.Tab.0.right/62.0.1304.768@62.0.1304.768" timestamp="1582903292027" />
+    <state width="1283" height="192" key="GridCell.Tab.0.left/62.0.1304.768@62.0.1304.768" timestamp="1583060465864" />
+    <state width="1283" height="192" key="GridCell.Tab.0.right" timestamp="1583060465864">
+      <screen x="62" y="0" width="1304" height="768" />
+    </state>
+    <state width="1283" height="192" key="GridCell.Tab.0.right/62.0.1304.768@62.0.1304.768" timestamp="1583060465864" />
     <state x="525" y="303" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582908608501">
       <screen x="62" y="0" width="1304" height="768" />
     </state>

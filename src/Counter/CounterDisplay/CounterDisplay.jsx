@@ -4,14 +4,14 @@ import styles from './CounterDisplay.module.css'
 class CounterDisplay extends React.Component {
 
   render = () => {
-
+    let countLim =
+      this.props.state.counter === this.props.state.maxCount ? styles.limit : styles.usual
     return (
       <div className={styles.counterDisplay}>
-        {this.props.counter}
+        <span className={countLim}>{this.props.state.counter}</span>
       </div>
     )
   }
-
 }
 
 export default CounterDisplay;

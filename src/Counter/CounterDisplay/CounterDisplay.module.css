@@ -1,0 +1,20 @@
+.counterDisplay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 210px;
+  background-color: antiquewhite;
+  border: thin solid;
+  border-radius: 5px;
+  text-align: center;
+}
+.usual{
+  font-size: 120px;
+  color: black;
+}
+.limit {
+  font-size: 120px;
+  font-weight: bold;
+  color: red;
+}
