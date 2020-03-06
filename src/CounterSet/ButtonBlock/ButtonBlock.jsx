@@ -21,7 +21,7 @@ class ButtonBlock extends React.Component {
     return (
       <div className={styles.buttonBlock}>
         <Button
-                btnName={`settt`}
+                btnName={`set`}
                 f={this.props.inc}
                 disBtn={this.props.state.counter === this.props.state.maxCount}
         />

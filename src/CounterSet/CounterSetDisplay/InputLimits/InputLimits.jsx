@@ -46,19 +46,19 @@ class InputLimits extends React.Component {
   render = () => {
     const Inputs = [
       {
-        name: 'min',
+        name: 'max',
         type: 'number',
-        placeholder: 'enter min value',
-        currentValue: this.state.minValue,
+        placeholder: 'enter max value',
+        currentValue: this.state.maxValue,
         isError: this.state.isError,
         onInputChange: this.onValueChange,
         onEnterPress: this.onEnterPress,
       },
       {
-        name: 'max',
+        name: 'min',
         type: 'number',
-        placeholder: 'enter max value',
-        currentValue: this.state.maxValue,
+        placeholder: 'enter min value',
+        currentValue: this.state.minValue,
         isError: this.state.isError,
         onInputChange: this.onValueChange,
         onEnterPress: this.onEnterPress,
