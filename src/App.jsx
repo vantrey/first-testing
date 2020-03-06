@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './App.module.css';
 import Counter from "./Counter/Counter";
+import CounterSet from "./CounterSet/CounterSet";
 
 class App extends React.Component {
   state = {
@@ -19,6 +20,7 @@ class App extends React.Component {
   render = () => {
     return (
       <div className={styles.App}>
+      <CounterSet inc={this.inc} reset={this.reset} state={this.state}/>
       <Counter inc={this.inc} reset={this.reset} state={this.state}/>
       </div>
     )
