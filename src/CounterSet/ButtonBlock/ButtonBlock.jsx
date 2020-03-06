@@ -1,14 +1,15 @@
 import React from 'react';
 import styles from './ButtonBlock.module.css'
-import Button from "./Button/Button";
+import Button from "../../Counter/ButtonBlock/Button/Button";
+
 
 
 class ButtonBlock extends React.Component {
   render = () => {
-    let buttons = [
+/*    let buttons = [
       {name: 'set', f: this.props.inc, disBtn: this.props.state.counter === this.props.state.maxCount,},
-    ]
-    let buttonEls = buttons.map((btn, index) => {
+    ]*/
+/*    let buttonEls = buttons.map((btn, index) => {
       return (
         <Button key={index}
                 btnName={btn.name}
@@ -16,10 +17,14 @@ class ButtonBlock extends React.Component {
                 disBtn={btn.disBtn}
         />
       )
-    })
+    })*/
     return (
       <div className={styles.buttonBlock}>
-        {buttonEls}
+        <Button
+                btnName={`settt`}
+                f={this.props.inc}
+                disBtn={this.props.state.counter === this.props.state.maxCount}
+        />
       </div>
     )
   }

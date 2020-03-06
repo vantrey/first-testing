@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './CounterDisplay.module.css'
+import styles from './CounterSetDisplay.module.css'
 import InputLimits from "./InputLimits/InputLimits";
 
-class CounterDisplay extends React.Component {
+class CounterSetDisplay extends React.Component {
 
   render = () => {
     return (
@@ -13,7 +13,7 @@ class CounterDisplay extends React.Component {
   }
 }
 
-export default CounterDisplay;
+export default CounterSetDisplay;
 
 
 

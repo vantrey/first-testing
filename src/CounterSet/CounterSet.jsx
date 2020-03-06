@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './CounterSet.module.css'
-import CounterDisplay from "./CounterDisplay/CounterDisplay";
+import CounterSetDisplay from "./CounterSetDisplay/CounterSetDisplay";
 import ButtonBlock from "./ButtonBlock/ButtonBlock";
 
 class CounterSet extends React.Component {
@@ -9,7 +9,7 @@ class CounterSet extends React.Component {
 
     return (
       <div className={styles.main}>
-        <CounterDisplay state={this.props.state}/>
+        <CounterSetDisplay state={this.props.state}/>
         <ButtonBlock
           state={this.props.state}
           inc={this.props.inc}
