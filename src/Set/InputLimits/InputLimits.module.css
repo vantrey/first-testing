@@ -1,4 +1,4 @@
-.addTextWrapper {
+.InputLimits {
   display: flex;
   flex-flow: column wrap;
 }

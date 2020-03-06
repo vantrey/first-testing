@@ -3,12 +3,12 @@ import Input from "./Input/Input"
 import styles from "./InputLimits.module.css"
 
 class InputLimits extends React.Component {
-  state = {
+/*  state = {
     minValue: '',
     maxValue: '',
     isError: false,
-  }
-  onValueChange = (e) => {
+  }*/
+  /*onValueChange = (e) => {
     if (e.currentTarget.name === 'min') {
       this.setState({
         minValue: e.currentTarget.value,
@@ -24,13 +24,13 @@ class InputLimits extends React.Component {
         isMinError: true,
       })
     }
-  }
-  setValue = (e) => {
+  }*/
+  /*setValue = (e) => {
  if (!e.currentTarget.value) {
       this.setState({isError: true})
     } else {
       if (e.currentTarget.name === 'min') {
-        alert(this.state.minValue)
+        this.props.setMinValue(this.state.minValue)
         this.setState({minValue: ''})
       } else if (e.currentTarget.name === 'max') {
         alert(this.state.maxValue)
@@ -39,31 +39,26 @@ class InputLimits extends React.Component {
         this.setState({isError: true})
       }
     }
-  }
-  onEnterPress = (e) => {
-    e.key === 'Enter' && this.setValue(e)
-  }
+  }*/
   render = () => {
     const Inputs = [
       {
         name: 'max',
         type: 'number',
         placeholder: 'enter max value',
-        currentValue: this.state.maxValue,
-        isError: this.state.isError,
-        onInputChange: this.onValueChange,
-        onEnterPress: this.onEnterPress,
+        currentValue: this.props.state.maxValue,
+        isError: this.props.state.isError,
+        onValueChange: this.props.onValueChange,
       },
       {
         name: 'min',
         type: 'number',
         placeholder: 'enter min value',
-        currentValue: this.state.minValue,
-        isError: this.state.isError,
-        onInputChange: this.onValueChange,
-        onEnterPress: this.onEnterPress,
+        currentValue: this.props.state.minValue,
+        isError: this.props.state.isError,
+        onValueChange: this.props.onValueChange,
       },
-    ]
+    ];
     const InputsEls = Inputs.map((input, i) => {
       return (
         <Input
@@ -73,13 +68,12 @@ class InputLimits extends React.Component {
           placeholder={input.placeholder}
           isError={input.isError}
           currentValue={input.currentValue}
-          onInputChange={input.onInputChange}
-          onEnterPress={input.onEnterPress}
+          onValueChange={input.onValueChange}
         />
       )
     })
     return (
-      <div className={styles.addTextWrapper}>
+      <div className={styles.InputLimits}>
         {InputsEls}
       </div>
     )

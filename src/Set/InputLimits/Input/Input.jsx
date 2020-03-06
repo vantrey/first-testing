@@ -11,8 +11,7 @@ class Input extends React.Component {
              type={this.props.type}
              placeholder={this.props.placeholder}
              value={this.props.currentValue}
-             onChange={this.props.onInputChange}
-             onKeyPress={this.props.onEnterPress}
+             onChange={this.props.onValueChange}
       />
     )
   }
