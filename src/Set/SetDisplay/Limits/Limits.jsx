@@ -8,7 +8,6 @@ class Limits extends React.Component {
       {
         name: 'max',
         type: 'number',
-        placeholder: 'enter max value',
         currentValue: this.props.state.maxValue,
         isError: this.props.state.isError,
         onValueChange: this.props.onValueChange,
@@ -16,7 +15,6 @@ class Limits extends React.Component {
       {
         name: 'min',
         type: 'number',
-        placeholder: 'enter min value',
         currentValue: this.props.state.minValue,
         isError: this.props.state.isError,
         onValueChange: this.props.onValueChange,
@@ -28,7 +26,6 @@ class Limits extends React.Component {
           key={i}
           name={input.name}
           type={input.type}
-          placeholder={input.placeholder}
           isError={input.isError}
           currentValue={input.currentValue}
           onValueChange={input.onValueChange}

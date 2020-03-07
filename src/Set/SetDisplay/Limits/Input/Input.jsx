@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import styles from './Input.module.css'
 
 class Input extends React.Component {
@@ -6,6 +6,7 @@ class Input extends React.Component {
   render = () => {
     let classForEl = this.props.isError ? `${styles.input} ${styles.error}` : styles.input
     return (
+      <label className={styles.input}> {this.props.name}
       <input className={classForEl}
              name={this.props.name}
              type={this.props.type}
@@ -13,6 +14,7 @@ class Input extends React.Component {
              value={this.props.currentValue}
              onChange={this.props.onValueChange}
       />
+      </label>
     )
   }
 }

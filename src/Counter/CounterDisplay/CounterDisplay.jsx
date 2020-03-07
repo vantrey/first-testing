@@ -5,7 +5,9 @@ class CounterDisplay extends React.Component {
 
   render = () => {
     let countLim =
-      this.props.state.counter === this.props.state.maxCount ? styles.limit : styles.usual
+      this.props.state.counter === this.props.state.maxCount ?
+        `${styles.limit} ${styles.usual}` :
+        styles.usual
     return (
       <div className={styles.counterDisplay}>
         <span className={countLim}>{this.props.state.counter}</span>
