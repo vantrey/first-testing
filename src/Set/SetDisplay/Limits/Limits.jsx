@@ -1,8 +1,8 @@
 import React from 'react'
 import Input from "./Input/Input"
-import styles from "./InputLimits.module.css"
+import styles from "./Limits.module.css"
 
-class InputLimits extends React.Component {
+class Limits extends React.Component {
 /*  state = {
     minValue: '',
     maxValue: '',
@@ -73,11 +73,11 @@ class InputLimits extends React.Component {
       )
     })
     return (
-      <div className={styles.InputLimits}>
+      <div className={styles.Limits}>
         {InputsEls}
       </div>
     )
   }
 }
 
-export default InputLimits
+export default Limits

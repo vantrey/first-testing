@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './Set.module.css'
 import ButtonBlock from "./ButtonBlock/ButtonBlock";
-import InputLimits from "./InputLimits/InputLimits";
+import Limits from "./SetDisplay/Limits/Limits";
+import SetDisplay from "./SetDisplay/SetDisplay";
 
 class Set extends React.Component {
 
@@ -13,12 +14,12 @@ class Set extends React.Component {
   onValueChange = (e) => {
     if (e.currentTarget.name === 'min') {
       this.setState({
-        minValue: e.currentTarget.value,
+        minValue: Number(e.currentTarget.value),
         isError: false,
       })
     } else if (e.currentTarget.name === 'max') {
       this.setState({
-        maxValue: e.currentTarget.value,
+        maxValue: Number(e.currentTarget.value),
         isError: false,
       })
     } else {
@@ -34,15 +35,13 @@ class Set extends React.Component {
   render = () => {
     return (
       <div className={styles.set}>
-        <InputLimits state={this.state} onValueChange={this.onValueChange}/>
+        <SetDisplay state={this.state} onValueChange={this.onValueChange}/>
         <ButtonBlock
           setValue={this.setValue}
-          state={this.props.state}
         />
       </div>
     )
   }
-
 }
 
 export default Set;

@@ -11,19 +11,19 @@ class App extends React.Component {
   };
   inc = () => {
     if (this.state.counter < this.state.maxCount) {
-      this.setState({counter: ++this.state.counter})
+      this.setState({counter: this.state.counter +1})
     }
   }
   reset = () => {
-    this.setState({counter: 0})
+    this.setState({counter: this.state.minCount})
   }
   setCounterValue = (min, max) => {
-    this.setState({counter: min, maxCount: max})
+    this.setState({counter: min, minCount: min, maxCount: max})
   }
   render = () => {
     return (
       <div className={styles.App}>
-        <Set setCounterValue={this.setCounterValue} state={this.state}/>
+        <Set setCounterValue={this.setCounterValue}/>
         <Counter inc={this.inc} reset={this.reset} state={this.state}/>
       </div>
     )

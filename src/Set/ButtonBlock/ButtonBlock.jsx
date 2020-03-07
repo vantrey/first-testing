@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './ButtonBlock.module.css'
-import Button from "../../Counter/ButtonBlock/Button/Button";
+import Button from "../../Button/Button";
 
 
 class ButtonBlock extends React.Component {
@@ -10,7 +10,6 @@ class ButtonBlock extends React.Component {
         <Button
           btnName={`set`}
           f={this.props.setValue}
-          disBtn={this.props.state.counter === this.props.state.maxCount}
         />
       </div>
     )
