@@ -19,7 +19,6 @@ class Set extends React.Component {
       this.setState({
         maxValue: Number(e.currentTarget.value),
       }, this.isErrorCheck)
-
     } else {
       this.setState({
         isError: true,
@@ -27,13 +26,15 @@ class Set extends React.Component {
     }
   }
   setValue = () => {
-    this.props.setCounterValue(this.state.minValue, this.state.maxValue)
+    this.props.setCounter(this.state.minValue, this.state.maxValue)
   }
   isErrorCheck = () => {
     if (this.state.minValue < 0 || this.state.maxValue <= this.state.minValue) {
       this.setState({isError: true})
+      this.props.setStatus('error')
     } else {
       this.setState({isError: false})
+      this.props.setStatus('setting')
     }
   }
 

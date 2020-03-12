@@ -8,22 +8,26 @@ class App extends React.Component {
     counter: 0,
     maxCount: 5,
     minCount: 0,
+    status: 'count', // 'error', 'setting'
+  }
+  setStatus = (status) => {
+    this.setState({status: status})
   }
   inc = () => {
     if (this.state.counter < this.state.maxCount) {
-      this.setState({counter: this.state.counter +1})
+      this.setState({counter: this.state.counter + 1})
     }
   }
   reset = () => {
     this.setState({counter: this.state.minCount})
   }
-  setCounterValue = (min, max) => {
+  setCounter = (min, max) => {
     this.setState({counter: min, minCount: min, maxCount: max})
   }
   render = () => {
     return (
       <div className={styles.App}>
-        <Set setCounterValue={this.setCounterValue}/>
+        <Set setStatus={this.setStatus} setCounter={this.setCounter}/>
         <Counter inc={this.inc} reset={this.reset} state={this.state}/>
       </div>
     )
