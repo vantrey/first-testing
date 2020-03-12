@@ -13,14 +13,13 @@ class Set extends React.Component {
   onValueChange = (e) => {
     if (e.currentTarget.name === 'min') {
       this.setState({
-        minValue: Number(e.currentTarget.value),
-      })
-      this.isErrorCheck()
+          minValue: Number(e.currentTarget.value),
+      }, this.isErrorCheck)
     } else if (e.currentTarget.name === 'max') {
       this.setState({
         maxValue: Number(e.currentTarget.value),
-      })
-      this.isErrorCheck()
+      }, this.isErrorCheck)
+
     } else {
       this.setState({
         isError: true,
@@ -43,8 +42,10 @@ class Set extends React.Component {
       <div className={styles.set}>
         <SetDisplay state={this.state} onValueChange={this.onValueChange}/>
         <ButtonBlock
+          isError={this.state.isError}
           setValue={this.setValue}
         />
+        {this.props.Counter}
       </div>
     )
   }

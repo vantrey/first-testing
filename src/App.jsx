@@ -8,7 +8,7 @@ class App extends React.Component {
     counter: 0,
     maxCount: 5,
     minCount: 0,
-  };
+  }
   inc = () => {
     if (this.state.counter < this.state.maxCount) {
       this.setState({counter: this.state.counter +1})
