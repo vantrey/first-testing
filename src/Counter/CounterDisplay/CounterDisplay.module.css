@@ -7,12 +7,22 @@
   background-color: antiquewhite;
   border: thin solid;
   border-radius: 5px;
+  font-family: fantasy;
+}
+
+.setting {
+  text-align: center;
+  font-style: italic;
+  padding: 5px;
+}
+
+.error {
+  color: red;
 }
 
 .usual {
   font-size: 120px;
   color: black;
-  font-family: fantasy;
 }
 
 .limit {

@@ -27,6 +27,7 @@ class Set extends React.Component {
   }
   setValue = () => {
     this.props.setCounter(this.state.minValue, this.state.maxValue)
+    this.props.setStatus('count')
   }
   isErrorCheck = () => {
     if (this.state.minValue < 0 || this.state.maxValue <= this.state.minValue) {

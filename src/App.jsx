@@ -6,23 +6,23 @@ import Set from "./Set/Set";
 class App extends React.Component {
   state = {
     counter: 0,
-    maxCount: 5,
-    minCount: 0,
-    status: 'count', // 'error', 'setting'
+    maxCountValue: 5,
+    minCountValue: 0,
+    status: 'setting', // 'error', 'count'
   }
   setStatus = (status) => {
     this.setState({status: status})
   }
   inc = () => {
-    if (this.state.counter < this.state.maxCount) {
+    if (this.state.counter < this.state.maxCountValue) {
       this.setState({counter: this.state.counter + 1})
     }
   }
   reset = () => {
-    this.setState({counter: this.state.minCount})
+    this.setState({counter: this.state.minCountValue})
   }
   setCounter = (min, max) => {
-    this.setState({counter: min, minCount: min, maxCount: max})
+    this.setState({counter: min, minCountValue: min, maxCountValue: max})
   }
   render = () => {
     return (
