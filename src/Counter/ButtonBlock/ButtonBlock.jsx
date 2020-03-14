@@ -8,12 +8,12 @@ class ButtonBlock extends React.Component {
 
     const buttons = [
       {
-        name: 'inc',
+        name: 'INC',
         f: this.props.inc,
         disBtn: disBtn || this.props.state.counter === this.props.state.maxCountValue,
       },
       {
-        name: 'reset',
+        name: 'RESET',
         f: this.props.reset,
         disBtn: disBtn || this.props.state.counter === this.props.state.minCountValue,
       },

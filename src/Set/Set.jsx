@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Set.module.css'
 import ButtonBlock from "./ButtonBlock/ButtonBlock";
 import SetDisplay from "./SetDisplay/SetDisplay";
+import {restoreState, saveState} from "./actualState"
 
 class Set extends React.Component {
 
@@ -10,10 +11,21 @@ class Set extends React.Component {
     maxValue: 5,
     isError: false,
   }
+
+  componentDidMount() {
+    restoreState(this.setStateFromSave)
+  }
+
+  setStateFromSave = (state) => {
+    this.setState(state, () => {
+      this.setCounterFromState()
+    })
+  }
+
   onValueChange = (e) => {
     if (e.currentTarget.name === 'min') {
       this.setState({
-          minValue: Number(e.currentTarget.value),
+        minValue: Number(e.currentTarget.value),
       }, this.isErrorCheck)
     } else if (e.currentTarget.name === 'max') {
       this.setState({
@@ -25,9 +37,14 @@ class Set extends React.Component {
       })
     }
   }
-  setValue = () => {
-    this.props.setCounter(this.state.minValue, this.state.maxValue)
-    this.props.setStatus('count')
+  setCounterFromState = () => {
+    this.props.setCounter({
+      minCountValue: this.state.minValue,
+      maxCountValue: this.state.maxValue,
+      counter: this.state.minValue,
+      status: 'count' // setting, error
+    })
+    saveState(this.state)
   }
   isErrorCheck = () => {
     if (this.state.minValue < 0 || this.state.maxValue <= this.state.minValue) {
@@ -45,9 +62,8 @@ class Set extends React.Component {
         <SetDisplay state={this.state} onValueChange={this.onValueChange}/>
         <ButtonBlock
           isError={this.state.isError}
-          setValue={this.setValue}
+          setCounterFromState={this.setCounterFromState}
         />
-        {this.props.Counter}
       </div>
     )
   }

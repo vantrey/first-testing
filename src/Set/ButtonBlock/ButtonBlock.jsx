@@ -8,8 +8,8 @@ class ButtonBlock extends React.Component {
       <div className={styles.buttonBlock}>
         <Button
           disBtn={this.props.isError}
-          btnName={`set`}
-          f={this.props.setValue}
+          btnName={`SET`}
+          f={this.props.setCounterFromState}
         />
       </div>
     )
