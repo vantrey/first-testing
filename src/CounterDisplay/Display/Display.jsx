@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './CounterDisplay.module.css'
+import styles from './Display.module.css'
 
-class CounterDisplay extends React.Component {
+class Display extends React.Component {
 
   render = () => {
     let classForCount =
@@ -9,7 +9,7 @@ class CounterDisplay extends React.Component {
         `${styles.limit} ${styles.usual}` :
         styles.usual
     return (
-      <div className={styles.counterDisplay}>
+      <div className={styles.display}>
         {
           (this.props.state.status === 'count' &&
             <span className={classForCount}>{this.props.state.counter}</span>) ||
@@ -23,7 +23,7 @@ class CounterDisplay extends React.Component {
   }
 }
 
-export default CounterDisplay;
+export default Display;
 
 
 

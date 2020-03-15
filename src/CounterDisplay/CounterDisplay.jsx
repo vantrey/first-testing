@@ -1,14 +1,14 @@
 import React from 'react';
-import styles from './Counter.module.css'
-import CounterDisplay from "./CounterDisplay/CounterDisplay";
+import styles from './CounterDisplay.module.css'
+import Display from "./Display/Display";
 import ButtonBlock from "./ButtonBlock/ButtonBlock";
 
-class Counter extends React.Component {
+class CounterDisplay extends React.Component {
 
   render = () => {
     return (
-      <div className={styles.counter}>
-        <CounterDisplay state={this.props.state}/>
+      <div className={styles.counterDisplay}>
+        <Display state={this.props.state}/>
         <ButtonBlock
           state={this.props.state}
           inc={this.props.inc}
@@ -20,7 +20,7 @@ class Counter extends React.Component {
 
 }
 
-export default Counter;
+export default CounterDisplay;
 
 
 

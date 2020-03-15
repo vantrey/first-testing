@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './Set.module.css'
+import styles from './SetterDisplay.module.css'
 import ButtonBlock from "./ButtonBlock/ButtonBlock";
-import SetDisplay from "./SetDisplay/SetDisplay";
+import Display from "./Display/Display";
 import {restoreState, saveState} from "./actualState"
 
-class Set extends React.Component {
+class SetterDisplay extends React.Component {
 
   state = {
     minValue: 0,
@@ -13,10 +13,10 @@ class Set extends React.Component {
   }
 
   componentDidMount() {
-    restoreState(this.setStateFromSave)
+    restoreState(this.setRestoredState)
   }
 
-  setStateFromSave = (state) => {
+  setRestoredState = (state) => {
     this.setState(state, () => {
       this.setCounterFromState()
     })
@@ -58,8 +58,8 @@ class Set extends React.Component {
 
   render = () => {
     return (
-      <div className={styles.set}>
-        <SetDisplay state={this.state} onValueChange={this.onValueChange}/>
+      <div className={styles.setterDisplay}>
+        <Display state={this.state} onValueChange={this.onValueChange}/>
         <ButtonBlock
           isError={this.state.isError}
           setCounterFromState={this.setCounterFromState}
@@ -69,7 +69,7 @@ class Set extends React.Component {
   }
 }
 
-export default Set;
+export default SetterDisplay;
 
 
 

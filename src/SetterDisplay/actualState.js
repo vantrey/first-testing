@@ -3,16 +3,10 @@ export const saveState = (state) => {
   localStorage.setItem('counter-state', stateAsString)
 }
 
-export const restoreState = (setStateFromSave) => {
-  let state = {
-    minValue: 0,
-    maxValue: 5,
-    isError: false,
-  }
+export const restoreState = (setRestoredState) => {
   const stateAsString = localStorage.getItem('counter-state')
   if (stateAsString !== null) {
-    state = JSON.parse(stateAsString)
+    let state = JSON.parse(stateAsString)
+    setRestoredState(state)
   }
-  setStateFromSave(state)
 }
-
