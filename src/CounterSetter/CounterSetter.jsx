@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './SetterDisplay.module.css'
-import ButtonBlock from "./ButtonBlock/ButtonBlock";
-import Display from "./Display/Display";
+import styles from './CounterSetter.module.css'
+import SetterButtonBlock from "./SetterButtonBlock/SetterButtonBlock";
+import Display from "../commonComponents/Display/Display";
 import {restoreState, saveState} from "./actualState"
 
-class SetterDisplay extends React.Component {
+class CounterSetter extends React.Component {
 
   state = {
     minValue: 0,
@@ -58,9 +58,9 @@ class SetterDisplay extends React.Component {
 
   render = () => {
     return (
-      <div className={styles.setterDisplay}>
-        <Display state={this.state} onValueChange={this.onValueChange}/>
-        <ButtonBlock
+      <div className={styles.counterSetter}>
+        <Display state={this.state} onValueChange={this.onValueChange} isSetter={true}/>
+        <SetterButtonBlock
           isError={this.state.isError}
           setCounterFromState={this.setCounterFromState}
         />
@@ -69,7 +69,7 @@ class SetterDisplay extends React.Component {
   }
 }
 
-export default SetterDisplay;
+export default CounterSetter;
 
 
 

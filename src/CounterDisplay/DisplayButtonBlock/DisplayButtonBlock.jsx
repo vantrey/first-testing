@@ -1,11 +1,10 @@
 import React from 'react';
-import styles from './ButtonBlock.module.css'
-import Button from "../../Button/Button";
+import styles from './DisplayButtonBlock.module.css'
+import Button from "../../commonComponents/Button/Button";
 
-class ButtonBlock extends React.Component {
+class DisplayButtonBlock extends React.Component {
   render = () => {
     const disBtn = this.props.state.status !== 'count'
-
     const buttons = [
       {
         name: 'INC',
@@ -28,14 +27,14 @@ class ButtonBlock extends React.Component {
       )
     })
     return (
-      <div className={styles.buttonBlock}>
+      <div className={styles.displayButtonBlock}>
         {buttonEls}
       </div>
     )
   }
 }
 
-export default ButtonBlock;
+export default DisplayButtonBlock;
 
 
 
