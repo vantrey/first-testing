@@ -1,8 +1,8 @@
-.button {
-  width: 70px;
-  height: 40px;
-  border-radius: 5px;
-  font-family: fantasy;
-  font-size: large;
-  letter-spacing: 0.05em;
+.button
+{
+    font-family: fantasy;  font-size: large;
+
+    width: 70px;  height: 40px;  letter-spacing: .05em;
+
+    border-radius: 5px;
 }

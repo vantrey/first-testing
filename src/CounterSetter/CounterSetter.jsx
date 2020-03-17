@@ -22,27 +22,15 @@ class CounterSetter extends React.Component {
     })
   }
 
-  onValueChange = (e) => {
-    if (e.currentTarget.name === 'min') {
-      this.setState({
-        minValue: Number(e.currentTarget.value),
-      }, this.isErrorCheck)
-    } else if (e.currentTarget.name === 'max') {
-      this.setState({
-        maxValue: Number(e.currentTarget.value),
-      }, this.isErrorCheck)
-    } else {
-      this.setState({
-        isError: true,
-      })
-    }
+  setLimits = (state) => {
+    this.setState(state, this.isErrorCheck)
   }
   setCounterFromState = () => {
     this.props.setCounter({
       minCountValue: this.state.minValue,
       maxCountValue: this.state.maxValue,
       counter: this.state.minValue,
-      status: 'count' // setting, error
+      status: 'count'
     })
     saveState(this.state)
   }
@@ -59,7 +47,7 @@ class CounterSetter extends React.Component {
   render = () => {
     return (
       <div className={styles.counterSetter}>
-        <Display state={this.state} onValueChange={this.onValueChange} isSetter={true}/>
+        <Display state={this.state} setLimits={this.setLimits} isSetter={true}/>
         <SetterButtonBlock
           isError={this.state.isError}
           setCounterFromState={this.setCounterFromState}

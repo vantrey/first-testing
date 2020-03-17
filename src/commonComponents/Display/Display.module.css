@@ -1,31 +1,43 @@
-.display {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 210px;
-  background-color: antiquewhite;
-  border: thin solid;
-  border-radius: 5px;
-  font-family: fantasy;
+.display
+{
+    font-family: fantasy;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 200px;
+    height: 210px;
+
+    border: thin solid;
+    border-radius: 5px;
+    background-color: antiquewhite;
 }
 
-.setting {
-  text-align: center;
-  font-style: italic;
-  padding: 5px;
+.setting
+{
+    font-style: italic;
+
+    padding: 5px;
+
+    text-align: center;
 }
 
-.error {
-  color: red;
+.error
+{
+    color: red;
 }
 
-.usual {
-  font-size: 120px;
-  color: black;
+.usual
+{
+    font-size: 120px;
+
+    color: black;
 }
 
-.limit {
-  font-weight: bold;
-  color: red;
+.limit
+{
+    font-weight: bold;
+
+    color: red;
 }

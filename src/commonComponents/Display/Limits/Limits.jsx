@@ -3,6 +3,16 @@ import Input from "./Input/Input"
 import styles from "./Limits.module.css"
 
 class Limits extends React.Component {
+
+  onValueChange = (e) => {
+    if (e.currentTarget.name === 'min') {
+      this.props.setLimits({minValue: Number(e.currentTarget.value)})
+    } else if (e.currentTarget.name === 'max') {
+      this.props.setLimits({maxValue: Number(e.currentTarget.value)})
+    } else {
+      this.props.setLimits({isError: true})
+    }
+  }
   render = () => {
     const Inputs = [
       {
@@ -10,16 +20,17 @@ class Limits extends React.Component {
         type: 'number',
         currentValue: this.props.state.maxValue,
         isError: this.props.state.isError,
-        onValueChange: this.props.onValueChange,
+        onValueChange: this.onValueChange,
       },
       {
         name: 'min',
         type: 'number',
         currentValue: this.props.state.minValue,
         isError: this.props.state.isError,
-        onValueChange: this.props.onValueChange,
+        onValueChange: this.onValueChange,
       },
-    ];
+    ]
+
     const InputsEls = Inputs.map((input, i) => {
       return (
         <Input
