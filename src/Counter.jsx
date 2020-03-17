@@ -21,13 +21,13 @@ class Counter extends React.Component {
   reset = () => {
     this.setState({counter: this.state.minCountValue})
   }
-  setCounter = (state) => {
+  setCounterState = (state) => {
     this.setState(state)
   }
   render = () => {
     return (
       <div className={styles.counter}>
-        <CounterSetter setStatus={this.setStatus} setCounter={this.setCounter}/>
+        <CounterSetter setStatus={this.setStatus} setCounterState={this.setCounterState}/>
         <CounterDisplay inc={this.inc} reset={this.reset} state={this.state}/>
       </div>
     )

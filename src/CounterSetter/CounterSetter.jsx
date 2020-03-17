@@ -18,15 +18,15 @@ class CounterSetter extends React.Component {
 
   setRestoredState = (state) => {
     this.setState(state, () => {
-      this.setCounterFromState()
+      this.setCounter()
     })
   }
 
   setLimits = (state) => {
     this.setState(state, this.isErrorCheck)
   }
-  setCounterFromState = () => {
-    this.props.setCounter({
+  setCounter = () => {
+    this.props.setCounterState({
       minCountValue: this.state.minValue,
       maxCountValue: this.state.maxValue,
       counter: this.state.minValue,
@@ -50,7 +50,7 @@ class CounterSetter extends React.Component {
         <Display state={this.state} setLimits={this.setLimits} isSetter={true}/>
         <SetterButtonBlock
           isError={this.state.isError}
-          setCounterFromState={this.setCounterFromState}
+          setCounter={this.setCounter}
         />
       </div>
     )

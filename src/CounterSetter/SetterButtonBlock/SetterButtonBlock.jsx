@@ -9,7 +9,7 @@ class SetterButtonBlock extends React.Component {
         <Button
           disBtn={this.props.isError}
           btnName={`SET`}
-          f={this.props.setCounterFromState}
+          f={this.props.setCounter}
         />
       </div>
     )
