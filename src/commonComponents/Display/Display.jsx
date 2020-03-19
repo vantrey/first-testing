@@ -10,7 +10,7 @@ class Display extends React.Component {
         `${styles.limit} ${styles.usual}` :
         styles.usual
     return (
-      <div className={styles.display}>
+      <div className={`${styles.display}`}>
         {
           this.props.isSetter
             ?
