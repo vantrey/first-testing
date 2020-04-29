@@ -4,6 +4,9 @@ import styles from './Input.module.css'
 class Input extends React.Component {
 
   render = () => {
+    let sdf = (e) => {
+
+    }
     let classForEl = this.props.isError ? `${styles.input} ${styles.error}` : styles.input
     return (
       <label className={styles.input}> {this.props.name}

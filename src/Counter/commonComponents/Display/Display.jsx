@@ -6,9 +6,9 @@ class Display extends React.Component {
 
   render = () => {
     let classForCount =
-      this.props.state.counter === this.props.state.maxCountValue ?
-        `${styles.limit} ${styles.usual}` :
-        styles.usual
+      this.props.counter === this.props.maxCountValue
+        ? `${styles.limit} ${styles.usual}`
+        : styles.usual
     return (
       <div className={`${styles.display}`}>
         {
@@ -16,11 +16,11 @@ class Display extends React.Component {
             ?
             <Limits state={this.props.state} setLimits={this.props.setLimits}/>
             :
-            (this.props.state.status === 'count' &&
-              <span className={classForCount}>{this.props.state.counter}</span>) ||
-            (this.props.state.status === 'setting' &&
+            (this.props.status === 'count' &&
+              <span className={classForCount}>{this.props.counter}</span>) ||
+            (this.props.status === 'setting' &&
               <span className={styles.setting}> Please, set min and max value and press "SET"</span>) ||
-            (this.props.state.status === 'error' &&
+            (this.props.status === 'error' &&
               <span className={styles.error}>ERROR! Invalid value</span>)
         }
       </div>

@@ -3,8 +3,9 @@ import styles from './Counter.module.css';
 import CounterDisplay from "./CounterDisplay/CounterDisplay";
 import CounterSetter from "./CounterSetter/CounterSetter";
 
+
 class Counter extends React.Component {
-  state = {
+/*  state = {
     minCountValue: 0,
     maxCountValue: 5,
     counter: this.minCountValue,
@@ -23,7 +24,7 @@ class Counter extends React.Component {
   }
   setCounterState = (state) => {
     this.setState(state)
-  }
+  }*/
   render = () => {
     return (
       <div className={styles.counter}>
@@ -34,4 +35,4 @@ class Counter extends React.Component {
   }
 }
 
-export default Counter;
+export default Counter

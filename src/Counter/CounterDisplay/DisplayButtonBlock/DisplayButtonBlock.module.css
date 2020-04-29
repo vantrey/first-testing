@@ -1,0 +1,3 @@
+.displayButtonBlock {
+  composes: buttonBlock from '../../../index.css';
+}

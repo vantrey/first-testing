@@ -4,17 +4,18 @@ import Button from "../../commonComponents/Button/Button";
 
 class DisplayButtonBlock extends React.Component {
   render = () => {
-    const disBtn = this.props.state.status !== 'count'
+    const {status, counter, minCountValue, maxCountValue} = this.props
+    const disBtn = status !== 'count'
     const buttons = [
       {
         name: 'INC',
-        f: this.props.inc,
-        disBtn: disBtn || this.props.state.counter === this.props.state.maxCountValue,
+        f: this.props.increment,
+        disBtn: disBtn || counter === maxCountValue,
       },
       {
         name: 'RESET',
         f: this.props.reset,
-        disBtn: disBtn || this.props.state.counter === this.props.state.minCountValue,
+        disBtn: disBtn || counter === minCountValue,
       },
     ]
     let buttonEls = buttons.map((btn, index) => {
@@ -34,7 +35,8 @@ class DisplayButtonBlock extends React.Component {
   }
 }
 
-export default DisplayButtonBlock;
+
+export default DisplayButtonBlock
 
 
 

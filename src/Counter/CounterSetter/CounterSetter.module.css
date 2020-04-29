@@ -1,0 +1,3 @@
+.counterSetter {
+  composes: counterBodyWrapper from '../../index.css';
+}

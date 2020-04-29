@@ -1,3 +1,0 @@
-.counterDisplay {
-composes: counterBodyWrapper from '../index.css';
-}
