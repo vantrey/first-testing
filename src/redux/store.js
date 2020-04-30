@@ -1,8 +1,9 @@
 import {combineReducers, createStore} from "redux"
-import {counterReducer} from "./counterReducer"
+import {outputReducer} from "./outputReducer"
+import {setterReducer} from "./setterReducer"
 
 const reducers = combineReducers({
-  counter: counterReducer,
+  output: outputReducer,
   setter: setterReducer,
 })
 

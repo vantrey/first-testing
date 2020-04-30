@@ -5,28 +5,22 @@ import styles from "./Limits.module.css"
 class Limits extends React.Component {
 
   onValueChange = (e) => {
-    if (e.currentTarget.name === 'min') {
-      this.props.setLimits({minValue: Number(e.currentTarget.value)})
-    } else if (e.currentTarget.name === 'max') {
-      this.props.setLimits({maxValue: Number(e.currentTarget.value)})
-    } else {
-      this.props.setLimits({isError: true})
-    }
+    this.props.setLimits(e.currentTarget.name, Number(e.currentTarget.value))
   }
   render = () => {
     const Inputs = [
       {
         name: 'max',
         type: 'number',
-        currentValue: this.props.state.maxValue,
-        isError: this.props.state.isError,
+        currentValue: this.props.maxValue,
+        isError: this.props.status === 'error',
         onValueChange: this.onValueChange,
       },
       {
         name: 'min',
         type: 'number',
-        currentValue: this.props.state.minValue,
-        isError: this.props.state.isError,
+        currentValue: this.props.minValue,
+        isError: this.props.status === 'error',
         onValueChange: this.onValueChange,
       },
     ]

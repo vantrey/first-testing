@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './DisplayButtonBlock.module.css'
+import styles from './OutputButtonBlock.module.css'
 import Button from "../../commonComponents/Button/Button";
 
-class DisplayButtonBlock extends React.Component {
+class OutputButtonBlock extends React.Component {
   render = () => {
     const {status, counter, minCountValue, maxCountValue} = this.props
     const disBtn = status !== 'count'
@@ -36,7 +36,7 @@ class DisplayButtonBlock extends React.Component {
 }
 
 
-export default DisplayButtonBlock
+export default OutputButtonBlock
 
 
 

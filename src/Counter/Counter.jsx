@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Counter.module.css';
-import CounterDisplay from "./CounterDisplay/CounterDisplay";
-import CounterSetter from "./CounterSetter/CounterSetter";
+import CounterDisplay from "./Output/Output";
+import CounterSetter from "./Setter/Setter";
 
 
 class Counter extends React.Component {
@@ -28,8 +28,8 @@ class Counter extends React.Component {
   render = () => {
     return (
       <div className={styles.counter}>
-        <CounterSetter setStatus={this.setStatus} setCounterState={this.setCounterState}/>
-        <CounterDisplay inc={this.inc} reset={this.reset} state={this.state}/>
+        <CounterSetter/>
+        <CounterDisplay/>
       </div>
     )
   }

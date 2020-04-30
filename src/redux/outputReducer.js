@@ -1,19 +1,15 @@
-const SET_STATUS = 'counterReducer/SET_STATUS'
-const INCREMENT = 'counterReducer/INCREMENT'
-const RESET = 'counterReducer/RESET'
+const INCREMENT = 'outputReducer/INCREMENT'
+const RESET = 'outputReducer/RESET'
+const SET_COUNTER = 'outputReducer/SET_COUNTER'
 
 const initialState = {
   minCountValue: 0,
   maxCountValue: 5,
   counter: 0,
-  status: 'count'//'count', 'error'
 }
 
-export const counterReducer = (state = initialState, action) => {
+export const outputReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_STATUS:
-      return {...state, status: action.status}
-
     case INCREMENT:
       if (state.counter < state.maxCountValue) {
         return {...state, counter:  state.counter + 1}
@@ -22,11 +18,13 @@ export const counterReducer = (state = initialState, action) => {
     case RESET:
       return {...state, counter: state.minCountValue}
 
+    case SET_COUNTER:
+      return {...state, ...action.newValues}
     default:
       return state
   }
 }
 
-export const setStatus = (status) => ({type: SET_STATUS, status})
 export const increment = () => ({type: INCREMENT})
 export const reset = () => ({type: RESET})
+export const setCounter = (newValues) => ({type: SET_COUNTER, newValues})

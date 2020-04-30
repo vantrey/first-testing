@@ -14,7 +14,7 @@ class Display extends React.Component {
         {
           this.props.isSetter
             ?
-            <Limits state={this.props.state} setLimits={this.props.setLimits}/>
+            <Limits {...this.props} />
             :
             (this.props.status === 'count' &&
               <span className={classForCount}>{this.props.counter}</span>) ||
