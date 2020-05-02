@@ -12,9 +12,7 @@ const restoredState = () => {
   const state = repository.getState()
   if (state) {
     return state
-  } else return {
-    reducers
-  }
+  } else return {reducers}
 }
 
 const store = createStore(reducers, restoredState())
