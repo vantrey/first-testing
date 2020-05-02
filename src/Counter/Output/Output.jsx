@@ -12,7 +12,7 @@ class Output extends React.Component {
     return (
       <div className={styles.counterDisplay}>
         <Display
-          maxCountValue={this.props.maxCountValue}
+          maxOutputValue={this.props.maxOutputValue}
           counter={this.props.counter}
           status={this.props.status}
           isSetter={false}
@@ -25,8 +25,8 @@ class Output extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    minCountValue: state.output.minCountValue,
-    maxCountValue: state.output.maxCountValue,
+    minOutputValue: state.output.minOutputValue,
+    maxOutputValue: state.output.maxOutputValue,
     counter: state.output.counter,
     status: state.setter.status
   }

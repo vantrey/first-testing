@@ -6,7 +6,7 @@ class Display extends React.Component {
 
   render = () => {
     let classForCount =
-      this.props.counter === this.props.maxCountValue
+      this.props.counter === this.props.maxOutputValue
         ? `${styles.limit} ${styles.usual}`
         : styles.usual
     return (
@@ -24,8 +24,6 @@ class Display extends React.Component {
               <span className={styles.error}>ERROR! Invalid value</span>)
         }
       </div>
-
-
     )
   }
 }

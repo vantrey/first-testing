@@ -1,10 +1,10 @@
+
 const SET_LIMITS = 'setterReducer/SET_LIMITS'
 const SET_STATUS = 'setterReducer/SET_STATUS'
 
 const initialState = {
-  minValue: 0,
-  maxValue: 5,
-  isError: false,
+  minSetterValue: 0,
+  maxSetterValue: 5,
   status: 'setting'//'count', 'error'
 }
 
@@ -14,23 +14,19 @@ export const setterReducer = (state = initialState, action) => {
       if (action.name === 'min') {
         return {
           ...state,
-          minValue: action.value,
-          status: action.value < state.maxValue && action.value >= 0 ?
+          minSetterValue: action.value,
+          status: action.value < state.maxSetterValue && action.value >= 0 ?
             'setting' : 'error'
         }
       } else if (action.name === 'max') {
         return {
           ...state,
-          maxValue: action.value,
-          status: action.value > state.minValue && state.minValue >= 0 ?
+          maxSetterValue: action.value,
+          status: action.value > state.minSetterValue && state.minSetterValue >= 0 ?
             'setting' : 'error'
         }
       } else return {...state, isError: true}
-    /*if (action.name === 'min' && action.value < state.maxValue && action.value >= 0) {
-      return {...state, minValue: action.value}
-    } else if (action.name === 'max' && action.value > state.minValue) {
-      return {...state, maxValue: action.value}
-    } else return {...state, isError: true}*/
+
     case SET_STATUS:
       return {...state, status: action.status}
 

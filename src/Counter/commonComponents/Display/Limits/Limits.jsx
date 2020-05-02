@@ -12,14 +12,14 @@ class Limits extends React.Component {
       {
         name: 'max',
         type: 'number',
-        currentValue: this.props.maxValue,
+        currentValue: this.props.maxSetterValue,
         isError: this.props.status === 'error',
         onValueChange: this.onValueChange,
       },
       {
         name: 'min',
         type: 'number',
-        currentValue: this.props.minValue,
+        currentValue: this.props.minSetterValue,
         isError: this.props.status === 'error',
         onValueChange: this.onValueChange,
       },
